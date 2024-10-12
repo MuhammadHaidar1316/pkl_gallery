@@ -1,0 +1,305 @@
+/* Reset Margin dan Padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #e0f2f1, #ffffff);
+    color: #333333;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(to bottom, #a5d6a7, #ffffff);
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.logo {
+    max-width: 150px; /* Atur ukuran maksimal logo */
+    width: 100%;
+    height: auto;
+    border-radius: 50%; /* Membuat logo menjadi bulat */
+    animation: rotate 20s linear infinite; /* Animasi rotasi */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transisi efek hover */
+}
+
+/* Animasi Rotasi */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Efek Hover pada Logo */
+.logo:hover {
+    transform: scale(1.1) rotate(0deg); /* Membesar dan berhenti rotasi saat di-hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Menambahkan bayangan */
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.header-content a, .header-content p {
+    margin: 0;
+    font-size: 1.2em;
+    text-decoration: none; /* Menghilangkan garis bawah pada tautan */
+    color: inherit; /* Menggunakan warna teks yang sama seperti paragraf */
+}
+
+/* Tambahkan gaya untuk tautan saat di-hover */
+.header-content a:hover {
+    color: #2e7d32; /* Warna hijau lebih gelap saat di-hover */
+    text-decoration: underline; /* Garis bawah saat di-hover */
+}
+
+/* Gallery Styles */
+#gallery, #member-gallery {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+#gallery h2, #member-gallery h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #388e3c; /* Warna hijau */
+}
+
+/* Aturan khusus untuk mengubah warna teks menjadi hitam */
+.black-text {
+    color: #000000; /* Warna hitam */
+}
+
+.month, #member-gallery .member-container {
+    margin-bottom: 40px;
+}
+
+.month h3, #member-gallery .member-info h3 {
+    font-size: 1.8em;
+    color: #388e3c; /* Warna hijau */
+    margin: 10px 0;
+    text-align: center;
+}
+
+.gallery-item, .member-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px; /* Jarak antar gambar */
+}
+
+.gallery-item img, .member-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Menambahkan sudut bulat pada gambar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+/* Efek Hover pada Gambar */
+.gallery-item img:hover, .member-card img:hover {
+    transform: scale(1.05);
+}
+
+/* Member Gallery Styles */
+.member-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px; /* Jarak antar kartu member */
+}
+
+.member-card {
+    background-color: #ffffff; /* Kolom putih */
+    border-radius: 10px; /* Sudut bulat */
+    overflow: hidden; /* Memastikan isi tidak keluar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.member-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.member-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.member-info h3 {
+    margin-bottom: 10px;
+}
+
+.member-info p {
+    color: #555555;
+    font-size: 0.95em;
+}
+
+/* Wave Divider Styles */
+.wave-divider {
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.wave-divider svg {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 60px; /* Disesuaikan dengan viewBox */
+}
+
+.wave-divider path {
+    fill: #a5d6a7; /* Warna yang sama dengan header dan footer */
+}
+
+/* Footer Styles */
+footer {
+    background: linear-gradient(to bottom, #a5d6a7, #ffffff);
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: auto;
+    flex-wrap: wrap; /* Untuk responsivitas */
+}
+
+.footer-left, .footer-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-left {
+    max-width: 60%;
+}
+
+.footer-grade, .footer-name, .footer-copy {
+    margin: 5px 0;
+    font-size: 1em;
+    color: #388e3c; /* Warna hijau */
+}
+
+.footer-copy {
+    align-self: flex-end; /* Posisi di sebelah kanan */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-content a, .header-content p {
+        margin: 5px 0;
+    }
+
+    .gallery-item, .member-container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-right {
+        align-self: flex-end;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .footer-copy {
+        align-self: flex-start; /* Pindah ke kiri pada layar kecil */
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content a, .header-content p {
+        font-size: 14px; /* Ukuran font lebih kecil untuk mobile */
+    }
+
+    .month h3, #member-gallery .member-info h3 {
+        font-size: 18px; /* Judul bulan lebih kecil untuk mobile */
+    }
+
+    .gallery-item, .member-container {
+        grid-template-columns: 1fr; /* Satu kolom pada layar sangat kecil */
+    }
+
+    .logo {
+        max-width: 100px; /* Ukuran logo lebih kecil pada layar sangat kecil */
+    }
+
+    footer {
+        padding: 15px;
+    }
+
+    .footer-left, .footer-right {
+        max-width: 100%;
+    }
+
+    .footer-grade, .footer-name, .footer-copy {
+        font-size: 0.9em;
+    }
+}
+
+/* Optional: Tambahkan efek smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+/* Loading Screen Styles */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9); /* Latar belakang putih semi-transparan */
+    display: none; /* Tersembunyi secara default */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Pastikan berada di atas semua elemen lainnya */
+}
+
+/* Spinner Styles */
+.spinner {
+    border: 8px solid #f3f3f3; /* Light grey */
+    border-top: 8px solid #388e3c; /* Hijau */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+}
+
+/* Animasi Spinner */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

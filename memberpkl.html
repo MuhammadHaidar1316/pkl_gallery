@@ -1,0 +1,108 @@
+<!-- memberpkl.html -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member PKL</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="spinner"></div>
+    </div>
+
+    <header>
+        <div class="logo-container">
+            <img src="img/logolkbk.png" alt="Logo Rumah Sakit" class="logo">
+        </div>
+        <h1>PKL Budi Kemuliaan</h1>
+        <div class="header-content">
+            <a href="index.html" class="left">Home</a>
+            <a href="https://rsbudikemuliaan.id/" class="right">Tentang Tempat PKL</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="member-gallery">
+            <h2>Daftar Member PKL</h2>
+            <div class="member-container">
+                <div class="member-card">
+                    <img src="img/putra.jpeg" alt="Member PKL 1">
+                    <div class="member-info">
+                        <h3>Putra Afriansyah</h3>
+                        <p>Ketua - Garda terdepan</p>
+                    </div>
+                </div>
+                <div class="member-card">
+                    <img src="img/haidar.jpeg" alt="Member PKL 2">
+                    <div class="member-info">
+                        <h3>Muhammad Haidar Khalish Khairy</h3>
+                        <p>Anggota - Motivator</p>
+                    </div>
+                </div>
+                <div class="member-card">
+                    <img src="img/thio.jpeg" alt="Member PKL 3">
+                    <div class="member-info">
+                        <h3>Thio Putra Wibawa Fadillah</h3>
+                        <p>Anggota - Tukang Jokes</p>
+                    </div>
+                </div>
+                <div class="member-card">
+                    <img src="img/aurel.jpeg" alt="Member PKL 4">
+                    <div class="member-info">
+                        <h3>Aurel Gustiyarani</h3>
+                        <p>Sekretaris - Supporter</p>
+                    </div>
+                </div>
+                <div class="member-card">
+                    <img src="img/meisya.jpeg" alt="Member PKL 5">
+                    <div class="member-info">
+                        <h3>Meisya Handrina</h3>
+                        <p>Sekretaris - Supporter</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Wave Divider between Main Content and Footer -->
+    <div class="wave-divider">
+        <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
+            <path d="M0,30 C150,60 350,0 600,30 C850,60 1050,0 1200,30 L1200,60 L0,60 Z" style="fill:#a5d6a7;"></path>
+        </svg>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <p class="footer-grade">XII-RPL</p>
+                <p class="footer-name">Muhammad Haidar Khalish Khairy</p>
+            </div>
+            <div class="footer-right">
+                <p class="footer-copy">&copy; 2024-2025 PKL PKL Budi Kemuliaan</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Loading Screen -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const homeLink = document.querySelector('.left'); // Link "Home"
+            const loadingScreen = document.getElementById('loading-screen');
+
+            homeLink.addEventListener('click', function(event) {
+                event.preventDefault(); // Mencegah navigasi langsung
+                loadingScreen.style.display = 'flex'; // Tampilkan loading screen
+
+                // Tunggu sebentar (misalnya 1 detik) sebelum navigasi
+                setTimeout(() => {
+                    window.location.href = this.href;
+                }, 500); // 1000 ms = 1 detik
+            });
+        });
+    </script>
+</body>
+</html>
